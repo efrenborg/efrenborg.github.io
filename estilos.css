@@ -1,0 +1,292 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+/* HEADER */
+header{
+    height: 100px;
+    background: grey;
+    padding: 0 50px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: aquamarine;
+    font-weight: 200;
+}
+.menu a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    /* transition: 0.4s; */
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrarmenu{
+    order:1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color:aquamarine
+}
+
+#check{
+    display: none;
+}
+
+/* BANNER */
+#banner{
+    padding: 0 50px;
+    background-image:url(../img/electric3.jpeg);
+    height:45vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: '';
+    background: rgba(77,77,92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid aquamarine;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton-empezar:hover{
+    background-color: aqua;
+}
+
+/* PERSONAS */
+#personas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#personas img{
+    border-radius: 0%;
+}
+#personas div{
+    padding: 30px 30px;
+}
+#personas div h4{
+    color: indianred;
+    font-size: 25px;
+    margin: 15px 0px;
+}
+#personas div p{
+    color:black;
+    font-size: 18px;
+}
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    padding: 10px 30px;
+    border: 3px solid aquamarine;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.45s;
+}
+.boton-saber-mas:hover{
+    background: aquamarine;
+    color:black;
+}
+
+/* ICONOS */
+#iconos{
+    padding: 0px 50px;
+    background: grey;
+}
+#contenido-iconos{
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid grey;
+}
+#icono-mobile{
+    border: none;
+}
+.contenido-iconos div i{
+    color:aquamarine;
+}
+.contenido-iconos div h6{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+.contenido-iconos div p{
+    color: grey;
+    font-size: 15px;
+}
+.boton-iconos{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* FORMULARIO */
+#contacto{
+    background-color: white;
+    padding: 50px 0px;
+    color:black;
+}
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datos-form{
+    display: flex;
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background-color: rgba(127, 255, 212, 0.253);
+    border-radius: 10px;
+    border: 2px solid aqua;
+    padding: 10px 5px;
+    outline: 0;
+    color:black;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border-color: aquamarine;
+    box-shadow: 0 0 0 1px black;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+    color:black
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-formulario .boton-saber-mas{
+    display: block;
+    border: 1px solid black;
+    color:black;
+    text-align: center;
+    transition: 5s;
+}
+.boton-formulario .boton-saber-mas:hover{
+    background: aquamarine;
+}
+
+/* FOOTER */
+footer{
+    background: grey;
+    color:#fff;
+    text-align: center;
+    padding: 10px 0px;
+}
+/* RESPONSIVE */
+@media(max-width: 768px){
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position:absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /* PERSONAS */
+    #personas{
+        flex-direction: column;
+    }
+
+    /* ICONOS */
+    #contenido-iconos{
+        flex-direction: column;
+    }
+    .contenido-iconos div{
+        border:none;
+    }
+
+    /* FORMULARIO */
+    .datos-form{
+        flex-direction: column;
+    }
+}
